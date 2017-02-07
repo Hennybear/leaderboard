@@ -34,4 +34,8 @@ GAME_INFO = [
 
 # YOUR CODE GOES HERE
 
+  def initialize(team)
+
+  end
+
 end
