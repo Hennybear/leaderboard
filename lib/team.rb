@@ -1,26 +1,19 @@
 class Team
   # YOUR CODE GOES HERE
-
-  def initialize(team)
-  	@team = team
-  	@wins = []
-  	@losses = []
-  	@rank = rank
+  attr_accessor :wins, :losses, :rank
+  def initialize(name)
+  	@name = name
+  	@wins = 0
+  	@losses = 0
+  	@rank = nil
   end
 
   def name
-  	@team
+  	@name
   end
 
   def rank
-  end
-
-  def wins
-  	@wins.count
-  end
-
-  def losses
-  	@losses.count
+    @rank
   end
 
 end
