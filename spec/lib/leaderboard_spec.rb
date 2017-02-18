@@ -1,8 +1,9 @@
 require 'spec_helper'
 
 RSpec.describe Leaderboard do
+  let(:leaderboard) { Leaderboard.new }
+
   describe ".new" do
-    let(:leaderboard) { Leaderboard.new }
   # YOUR CODE GOES HERE
     it 'generates a list of teams' do
       expect(leaderboard.teams).to be_a(Array)
@@ -21,7 +22,10 @@ RSpec.describe Leaderboard do
       expect(leaderboard.teams[2].rank).to eq(4)
     end
 
-    it 'ranks team higher if equal number of wins but less losses' do
+    describe "#team_game_summary" do
+      it 'generates a summary of the games played by team' do
+        expect(leaderboard.team_game_summary("Patriots")).to eq(3)
+      end
     end
 
   end
